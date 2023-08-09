@@ -1,13 +1,8 @@
-# Do not import any additional 3rd party external libraries as they will not
-# be available to AutoLab and are not needed (or allowed)
-
 import numpy as np
 
 class BatchNorm(object):
 
     def __init__(self, in_feature, alpha=0.9):
-
-        # You shouldn't need to edit anything in init
 
         self.alpha = alpha
         self.eps = 1e-8
@@ -15,7 +10,6 @@ class BatchNorm(object):
         self.norm = None
         self.out = None
 
-        # The following attributes will be tested
         self.var = np.ones((1, in_feature))
         self.mean = np.zeros((1, in_feature))
 
