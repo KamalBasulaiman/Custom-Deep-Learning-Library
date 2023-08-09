@@ -59,9 +59,6 @@ class GRU_Cell:
         self.z = self.z_act.forward(np.tensordot(self.Wzx,self.x,1) + np.tensordot(self.Wzh,self.hidden,1))
         self.h_tilda = self.h_act.forward(np.tensordot(self.Wh,(self.r*self.hidden),1) + np.tensordot(self.Wx,self.x,1))
         self.h_t = ((1-self.z)*self.hidden) + (self.z*self.h_tilda)
-        # Add your code here.
-        # Define your variables based on the writeup using the corresponding
-        # names below.
 
         #assert self.x.shape == (self.d, )
         #assert self.hidden.shape == (self.h, )
@@ -85,11 +82,6 @@ class GRU_Cell:
         # output:
         #  - dx: Derivative of loss wrt the input x
         #  - dh: Derivative  of loss wrt the input hidden h
-
-        # 1) Reshape everything you saved in the forward pass.
-        # 2) Compute all of the derivatives
-        # 3) Know that the autograders the gradients in a certain order, and the
-        #    local autograder will tell you which gradient you are currently failing.
 
 
         self.x = self.x.reshape(1,-1)
