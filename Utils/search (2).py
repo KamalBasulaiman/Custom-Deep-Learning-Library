@@ -14,7 +14,6 @@ the corresponding compressed symbol sequence i.e. without blanks
 or repeated symbols (a string).
 '''
 def GreedySearch(SymbolSets, y_probs):
-    # Follow the pseudocode from lecture to complete greedy search :-)
 
     forward_path = []
     forward_prob = 1.0
@@ -66,7 +65,6 @@ The function should return the symbol sequence with the best path score
 their scores.
 '''
 def BeamSearch(SymbolSets, y_probs, BeamWidth):
-    # Follow the pseudocode from lecture to complete beam search :-)
     # return (bestPath, mergedPathScores)
 
 
